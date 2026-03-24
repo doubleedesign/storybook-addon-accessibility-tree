@@ -2,12 +2,12 @@
   "compilerOptions": {
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "target": "esnext", // Node 20 according to https://github.com/microsoft/TypeScript/wiki/Node-Target-Mapping#node-20
+    "module": "preserve",
+    "target": "esnext",
     "allowJs": true,
     "resolveJsonModule": true,
     "moduleDetection": "force",
     "moduleResolution": "bundler",
-    "module": "preserve",
     "jsx": "react",
     "isolatedModules": true,
     "verbatimModuleSyntax": true,
@@ -17,7 +17,8 @@
     "noImplicitAny": true,
     "lib": ["esnext", "dom", "dom.iterable"],
     "baseUrl": ".",
-    "rootDir": "."
+    "rootDir": ".",
+    "typeRoots": ["./node_modules/@types", "./node_modules/storybook", "./node_modules/@storybook"]
   },
   "include": ["src/**/*", "tsup.config.ts"]
 }
