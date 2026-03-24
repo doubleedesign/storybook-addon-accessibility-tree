@@ -11,7 +11,7 @@
 import type { ProjectAnnotations, Renderer } from 'storybook/internal/types';
 
 import { KEY } from './constants';
-import { withRoundTrip } from './withRoundTrip';
+import { withAccessibilityTree } from './decorators/withAccessibilityTree';
 
 /**
  * Note: if you want to use JSX in this file, rename it to `preview.tsx`
@@ -19,7 +19,7 @@ import { withRoundTrip } from './withRoundTrip';
  */
 
 const preview: ProjectAnnotations<Renderer> = {
-  decorators: [withRoundTrip],
+  decorators: [withAccessibilityTree],
   initialGlobals: {
     [KEY]: false,
   },
