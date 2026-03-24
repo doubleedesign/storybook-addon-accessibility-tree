@@ -41,7 +41,8 @@ export default config;
 
 After forking/cloning this repository, run `npm install` to install dependencies. Then:
 - `pnpm run start` runs babel in watch mode and starts Storybook
-- `pnpm run build` builds and packages the addon code.
+- `pnpm run build` builds and packages the addon code
+- `pnpm run test` runs all unit tests.
 
 ### Troubleshooting
 

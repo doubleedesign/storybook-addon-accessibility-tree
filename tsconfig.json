@@ -18,7 +18,13 @@
     "lib": ["esnext", "dom", "dom.iterable"],
     "baseUrl": ".",
     "rootDir": ".",
-    "typeRoots": ["./node_modules/@types", "./node_modules/storybook", "./node_modules/@storybook"]
+    "typeRoots": [
+      "./node_modules/@types",
+      "./node_modules/storybook",
+      "./node_modules/@storybook",
+      "./node_modules/@testing-library",
+      "./node_modules/vitest"
+    ]
   },
   "include": ["src/**/*", "tsup.config.ts"]
 }
