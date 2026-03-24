@@ -11,6 +11,9 @@ importers:
       '@eslint/js':
         specifier: ^9.36.0
         version: 9.38.0
+      '@storybook/addon-a11y':
+        specifier: next
+        version: 10.4.0-alpha.3(storybook@10.1.0-alpha.10(@testing-library/dom@10.4.1)(prettier@3.6.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(vite@7.1.12(@types/node@20.19.23)))
       '@storybook/addon-docs':
         specifier: next
         version: 10.1.0-alpha.10(@types/react@18.3.26)(esbuild@0.25.11)(rollup@4.52.5)(storybook@10.1.0-alpha.10(@testing-library/dom@10.4.1)(prettier@3.6.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(vite@7.1.12(@types/node@20.19.23)))(vite@7.1.12(@types/node@20.19.23))
@@ -661,6 +664,11 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@storybook/addon-a11y@10.4.0-alpha.3':
+    resolution: {integrity: sha512-WQLcP16HBsX8vNYfs31+U0zq/ujSP4qT1sn4sgaE3Fge0IDySz5FNtR6ORHn8BRHSN1YPcDDovfVHf8KX/wnPg==}
+    peerDependencies:
+      storybook: ^10.4.0-alpha.3
+
   '@storybook/addon-docs@10.1.0-alpha.10':
     resolution: {integrity: sha512-2GriGpjtBsP1U/oT36ACH5yZXx+eUODLBu5j0U/AF6MreeBJE3iGdija0EKb1VFUchCnCjpg7Wp8WDOGCpjBEQ==}
     peerDependencies:
@@ -1049,6 +1057,10 @@ packages:
   await-to-js@3.0.0:
     resolution: {integrity: sha512-zJAaP9zxTcvTHRlejau3ZOY4V7SRpiByf3/dxx2uyKxxor19tpmpV2QRsTKikckwhaPmr2dVpxxMr7jOCYVp5g==}
     engines: {node: '>=6.0.0'}
+
+  axe-core@4.11.1:
+    resolution: {integrity: sha512-BASOg+YwO2C+346x3LZOeoovTIoTrRqEsqMa6fmfAV0P+U9mFr9NsyOEpiYvFjbc64NMrSswhV50WdXzdb/Z5A==}
+    engines: {node: '>=4'}
 
   balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
@@ -3567,6 +3579,12 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.52.5':
     optional: true
 
+  '@storybook/addon-a11y@10.4.0-alpha.3(storybook@10.1.0-alpha.10(@testing-library/dom@10.4.1)(prettier@3.6.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(vite@7.1.12(@types/node@20.19.23)))':
+    dependencies:
+      '@storybook/global': 5.0.0
+      axe-core: 4.11.1
+      storybook: 10.1.0-alpha.10(@testing-library/dom@10.4.1)(prettier@3.6.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(vite@7.1.12(@types/node@20.19.23))
+
   '@storybook/addon-docs@10.1.0-alpha.10(@types/react@18.3.26)(esbuild@0.25.11)(rollup@4.52.5)(storybook@10.1.0-alpha.10(@testing-library/dom@10.4.1)(prettier@3.6.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(vite@7.1.12(@types/node@20.19.23)))(vite@7.1.12(@types/node@20.19.23))':
     dependencies:
       '@mdx-js/react': 3.1.1(@types/react@18.3.26)(react@18.3.1)
@@ -4050,6 +4068,8 @@ snapshots:
       possible-typed-array-names: 1.1.0
 
   await-to-js@3.0.0: {}
+
+  axe-core@4.11.1: {}
 
   balanced-match@1.0.2: {}
 

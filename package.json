@@ -49,6 +49,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",
+    "@storybook/addon-a11y": "next",
     "@storybook/addon-docs": "next",
     "@storybook/icons": "^2.0.0",
     "@storybook/react-vite": "next",
@@ -98,7 +99,15 @@
   "storybook": {
     "displayName": "Accessibility Tree",
     "supportedFrameworks": [
-      "react", "vue", "angular", "web-components", "ember", "html", "svelte", "preact", "react-native"
+      "react",
+      "vue",
+      "angular",
+      "web-components",
+      "ember",
+      "html",
+      "svelte",
+      "preact",
+      "react-native"
     ],
     "icon": "https://user-images.githubusercontent.com/321738/63501763-88dbf600-c4cc-11e9-96cd-94adadc2fd72.png"
   },

@@ -45,8 +45,12 @@ After forking/cloning this repository, run `npm install` to install dependencies
 
 ### Troubleshooting
 
-- `npm run start` erroring with "module not found": Try using `pnpm` instead of `npm`.
-- Changes to the addon code not reflecting in Storybook: Rebuild and restart. Hot reload capabilities for addons are limited.
+- Changes to the addon code not reflecting in Storybook:
+  - Rebuild and restart. Hot reload capabilities for addons are limited.
+- `npm run start` erroring with "module not found": 
+  - Use `pnpm` instead of `npm`
+  - Run `npm run build:watch` and then `npm run storybook` separately (or `pnpm` equivalents)
+
 
 ### Resources
 

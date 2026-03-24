@@ -6,7 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="ffece7b8-7a39-4803-b428-345850734800" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.storybook/local-preset.ts" beforeDir="false" afterPath="$PROJECT_DIR$/.storybook/local-preset.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.storybook/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/.storybook/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Tab.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Tool.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/manager.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/manager.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/preview.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/preview.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/withGlobals.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/withRoundTrip.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/withRoundTrip.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +61,7 @@
     "node.js.selected.package.standard": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "pnpm",
-    "settings.editor.selected.configurable": "settings.javascript.prettier",
+    "settings.editor.selected.configurable": "settings.javascript.runtime",
     "to.speed.mode.migration.done": "true",
     "ts.external.directory.path": "C:\\Users\\leesa\\WebstormProjects\\storybook-addon-accessibility-tree\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
@@ -72,7 +82,7 @@
       <option name="presentableId" value="Default" />
       <updated>1774330682287</updated>
       <workItem from="1774330683352" duration="3814000" />
-      <workItem from="1774334545945" duration="795000" />
+      <workItem from="1774334545945" duration="1299000" />
     </task>
     <servers />
   </component>
