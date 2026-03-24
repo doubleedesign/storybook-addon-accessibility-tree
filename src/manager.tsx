@@ -11,11 +11,11 @@ import { ADDON_ID, PANEL_ID } from './constants';
 
 // Register the addon
 addons.register(ADDON_ID, (api) => {
-  // Register a panel
-  addons.add(PANEL_ID, {
-    type: types.PANEL,
-    title: 'Outline',
-    match: ({ viewMode }) => viewMode === 'story',
-    render: ({ active }) => <Panel active={active} />,
-  });
+	// Register a panel
+	addons.add(PANEL_ID, {
+		type: types.PANEL,
+		title: 'Outline',
+		match: ({ viewMode }) => viewMode === 'story',
+		render: ({ active }) => <Panel active={active} />,
+	});
 });

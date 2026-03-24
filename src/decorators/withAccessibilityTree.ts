@@ -4,21 +4,21 @@ import type { Args, DecoratorFunction, PartialStoryFn, Renderer, StoryContext } 
 import { EVENTS } from '../constants';
 
 const parse = (canvas: ParentNode = globalThis.document) => {
-  // Get the entire DOM tree of the canvas element
-  const tree = canvas.querySelector('#storybook-root')?.innerHTML ?? '';
+	// Get the entire DOM tree of the canvas element
+	const tree = canvas.querySelector('#storybook-root')?.innerHTML ?? '';
 
-  return canvas;
+	return canvas;
 };
 
 export const withAccessibilityTree: DecoratorFunction = (
-  storyFn: PartialStoryFn<Renderer, Args>,
-  context: StoryContext<Renderer, Args>,
+	storyFn: PartialStoryFn<Renderer, Args>,
+	context: StoryContext<Renderer, Args>,
 ) => {
-  const emit = useChannel({});
+	const emit = useChannel({});
 
-  useEffect(() => {
-    emit(EVENTS.RESULT, parse(context.canvasElement as ParentNode));
-  }, [context.canvasElement, emit]);
+	useEffect(() => {
+		emit(EVENTS.RESULT, parse(context.canvasElement as ParentNode));
+	}, [context.canvasElement, emit]);
 
-  return storyFn();
+	return storyFn();
 };

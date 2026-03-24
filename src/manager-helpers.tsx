@@ -7,11 +7,11 @@ import { ADDON_ID } from './constants';
  * use it, and ignored by those who don't.
  */
 export function renderLabel(item: API_HashEntry) {
-  if (item.type !== 'story' && item.type !== 'docs') {
-    return;
-  }
+	if (item.type !== 'story' && item.type !== 'docs') {
+		return;
+	}
 
-  if (item.title.startsWith(ADDON_ID)) {
-    return <span>🌟 {item.name}</span>;
-  }
+	if (item.title.startsWith(ADDON_ID)) {
+		return <span>🌟 {item.name}</span>;
+	}
 }

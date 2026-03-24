@@ -5,21 +5,21 @@ import { useChannel } from 'storybook/manager-api';
 import { EVENTS } from '../constants';
 
 interface PanelProps {
-  active?: boolean;
+	active?: boolean;
 }
 
 export const Panel: React.FC<PanelProps> = memo(function MyPanel(props: PanelProps) {
-  useChannel({
-    [EVENTS.RESULT]: (newResults) => {
-      console.log(newResults);
-    },
-  });
+	useChannel({
+		[EVENTS.RESULT]: (newResults) => {
+			console.log(newResults);
+		},
+	});
 
-  return (
-    <AddonPanel active={props.active ?? false}>
-      <Fragment>
-        <p>Stuff will go here</p>
-      </Fragment>
-    </AddonPanel>
-  );
+	return (
+		<AddonPanel active={props.active ?? false}>
+			<Fragment>
+				<p>Stuff will go here</p>
+			</Fragment>
+		</AddonPanel>
+	);
 });

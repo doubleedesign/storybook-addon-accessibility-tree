@@ -9,7 +9,7 @@ import { renderLabel } from '../src/manager-helpers';
  * times can cause the addon registration code to run multiple times.
  */
 addons.setConfig({
-  sidebar: {
-    renderLabel,
-  },
+	sidebar: {
+		renderLabel,
+	},
 });

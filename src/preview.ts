@@ -19,10 +19,10 @@ import { withAccessibilityTree } from './decorators/withAccessibilityTree';
  */
 
 const preview: ProjectAnnotations<Renderer> = {
-  decorators: [withAccessibilityTree],
-  initialGlobals: {
-    [KEY]: false,
-  },
+	decorators: [withAccessibilityTree],
+	initialGlobals: {
+		[KEY]: false,
+	},
 };
 
 export default preview;
