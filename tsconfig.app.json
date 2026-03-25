@@ -2,7 +2,8 @@
 	"compilerOptions": {
 		"baseUrl": ".",
 		"rootDir": ".",
-		"module": "preserve",
+		"module": "esnext",
+		"moduleResolution": "bundler",
 		"target": "esnext",
 		"lib": [
 			"esnext",
@@ -14,7 +15,6 @@
 		"allowJs": true,
 		"resolveJsonModule": true,
 		"moduleDetection": "force",
-		"moduleResolution": "bundler",
 		"jsx": "react",
 		"isolatedModules": true,
 		"verbatimModuleSyntax": true,
@@ -25,7 +25,8 @@
 	},
 	"include": [
 		"src/**/*",
-		"tsup.config.ts"
+		"tsup.config.ts",
+		".storybook/**/*"
 	],
 	"exclude": [
 		"node_modules",
