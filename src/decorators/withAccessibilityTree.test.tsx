@@ -4,10 +4,10 @@ import { render, screen } from '@testing-library/react';
 import { withAccessibilityTree } from './withAccessibilityTree';
 import { EVENTS } from '../constants';
 
-const mockEmit = vi.fn();
-const mockUseChannel = vi.fn();
+const mockEmit = vitest.fn();
+const mockUseChannel = vitest.fn();
 
-vi.mock('storybook/preview-api', async () => {
+vitest.mock('storybook/preview-api', async () => {
 	return {
 		useEffect: (fn: () => void, deps: unknown[]) => {
 			fn();

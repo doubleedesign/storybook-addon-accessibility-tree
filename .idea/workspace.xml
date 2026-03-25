@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ffece7b8-7a39-4803-b428-345850734800" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Testing_Library.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/WebStorm.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/decorators/withAccessibilityTree.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/decorators/withAccessibilityTree.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.test.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.test.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +127,7 @@
       <workItem from="1774428071596" duration="623000" />
       <workItem from="1774428711559" duration="389000" />
       <workItem from="1774429114666" duration="319000" />
-      <workItem from="1774429447967" duration="4630000" />
+      <workItem from="1774429447967" duration="5380000" />
     </task>
     <servers />
   </component>
