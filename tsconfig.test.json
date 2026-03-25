@@ -1,0 +1,12 @@
+{
+	"extends": "./tsconfig.json",
+	"compilerOptions": {
+		"typeRoots": [
+			"./node_modules/@types"
+		],
+		"types": [
+			"vitest/globals",
+			"@testing-library/jest-dom/vitest"
+		]
+	}
+}

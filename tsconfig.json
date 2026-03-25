@@ -1,30 +1,36 @@
 {
-  "compilerOptions": {
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "module": "preserve",
-    "target": "esnext",
-    "allowJs": true,
-    "resolveJsonModule": true,
-    "moduleDetection": "force",
-    "moduleResolution": "bundler",
-    "jsx": "react",
-    "isolatedModules": true,
-    "verbatimModuleSyntax": true,
-    "strict": true,
-    "noUncheckedIndexedAccess": true,
-    "noImplicitOverride": true,
-    "noImplicitAny": true,
-    "lib": ["esnext", "dom", "dom.iterable"],
-    "baseUrl": ".",
-    "rootDir": ".",
-    "typeRoots": [
-      "./node_modules/@types",
-      "./node_modules/storybook",
-      "./node_modules/@storybook",
-      "./node_modules/@testing-library",
-      "./node_modules/vitest"
-    ]
-  },
-  "include": ["src/**/*", "tsup.config.ts"]
+	"compilerOptions": {
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"module": "preserve",
+		"target": "esnext",
+		"allowJs": true,
+		"resolveJsonModule": true,
+		"moduleDetection": "force",
+		"moduleResolution": "bundler",
+		"jsx": "react",
+		"isolatedModules": true,
+		"verbatimModuleSyntax": true,
+		"strict": true,
+		"noUncheckedIndexedAccess": true,
+		"noImplicitOverride": true,
+		"noImplicitAny": true,
+		"lib": [
+			"esnext",
+			"dom",
+			"dom.iterable"
+		],
+		"baseUrl": ".",
+		"rootDir": "."
+	},
+	"include": [
+		"src/**/*",
+		"tsup.config.ts",
+		"vitest.setup.ts"
+	],
+	"exclude": [
+		"node_modules",
+		"dist",
+		"build"
+	]
 }
