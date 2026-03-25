@@ -1,6 +1,5 @@
 import React from 'react';
 import type { StoryContext } from 'storybook/internal/types';
-import { vi, describe, it, expect } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import { withAccessibilityTree } from './withAccessibilityTree';
 import { EVENTS } from '../constants';
