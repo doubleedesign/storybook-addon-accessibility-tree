@@ -1,0 +1,44 @@
+{
+	"compilerOptions": {
+		"baseUrl": ".",
+		"rootDir": ".",
+		"module": "preserve",
+		"target": "esnext",
+		"lib": [
+			"esnext",
+			"dom",
+			"dom.iterable"
+		],
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"allowJs": true,
+		"resolveJsonModule": true,
+		"moduleDetection": "force",
+		"moduleResolution": "bundler",
+		"jsx": "react",
+		"isolatedModules": true,
+		"verbatimModuleSyntax": true,
+		"strict": true,
+		"noUncheckedIndexedAccess": true,
+		"noImplicitOverride": true,
+		"noImplicitAny": true,
+	},
+	"include": [
+		"src/**/*",
+		"tsup.config.ts"
+	],
+	"exclude": [
+		"node_modules",
+		"dist",
+		"build",
+		"coverage",
+		"src/**/*.test.ts",
+		"src/**/*.test.tsx",
+		"vitest.setup.ts"
+	],
+	"references": [
+		{
+			"path": "./tsconfig.test.json"
+		}
+	]
+}

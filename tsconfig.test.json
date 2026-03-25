@@ -1,9 +1,32 @@
 {
-	"extends": "./tsconfig.json",
 	"compilerOptions": {
+		"baseUrl": ".",
+		"rootDir": ".",
+		"noEmit": true,
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"module": "esnext",
+		"target": "esnext",
+		"resolveJsonModule": true,
+		"moduleDetection": "force",
+		"moduleResolution": "bundler",
+		"jsx": "react",
+		"isolatedModules": true,
+		"verbatimModuleSyntax": true,
+		"lib": [
+			"esnext",
+			"dom",
+			"dom.iterable"
+		],
 		"types": [
 			"vitest/globals",
-			"@testing-library/jest-dom/vitest"
+			"@testing-library/jest-dom/vitest",
+			"@testing-library/dom"
 		]
-	}
+	},
+	"include": [
+		"src/**/*.test.ts",
+		"src/**/*.test.tsx",
+		"vitest.setup.ts"
+	]
 }

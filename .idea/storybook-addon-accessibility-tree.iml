@@ -4,6 +4,6 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="@types/testing-library__jest-dom" level="application" />
+    <orderEntry type="library" name="Testing Library" level="project" />
   </component>
 </module>

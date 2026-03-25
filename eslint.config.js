@@ -5,11 +5,15 @@ import tseslint from 'typescript-eslint';
 import stylisticPlugin from '@stylistic/eslint-plugin-ts';
 
 export default [
+	js.configs.recommended,
+	...tseslint.configs.recommended,
+	...storybook.configs['flat/recommended'],
 	{
 		plugins: {
 			'@stylistic': stylisticPlugin,
 		},
 		rules: {
+			'@typescript-eslint/no-unused-vars': 'off',
 			'@stylistic/indent': ['error', 'tab', {
 				'SwitchCase': 1,
 				'FunctionExpression': {
@@ -61,7 +65,6 @@ export default [
 			'.vscode',
 		],
 	},
-	js.configs.recommended,
 	reactPlugin.configs.flat.recommended,
 	{
 		settings: {
@@ -70,6 +73,4 @@ export default [
 			},
 		},
 	},
-	...tseslint.configs.recommended,
-	...storybook.configs['flat/recommended'],
 ];
