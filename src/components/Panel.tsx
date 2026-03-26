@@ -1,25 +1,28 @@
-import React, { Fragment, memo } from 'react';
+import React, { memo, useState, useEffect } from 'react';
+import { addons } from 'storybook/preview-api';
 import { AddonPanel } from 'storybook/internal/components';
-import { useChannel } from 'storybook/manager-api';
-
 import { EVENTS } from '../constants';
 
 interface PanelProps {
 	active?: boolean;
 }
 
-export const Panel: React.FC<PanelProps> = memo(function MyPanel(props: PanelProps) {
-	useChannel({
-		[EVENTS.RESULT]: (newResults) => {
-			console.log(newResults);
-		},
+export const Panel: React.FC<PanelProps> = memo(function OutlinePanel(props: PanelProps) {
+	const channel = addons.getChannel();
+	const [results, setResults] = useState(null);
+
+	useEffect(() => {
+		channel.emit(EVENTS.REQUEST);
+	}, [channel]);
+
+	channel.on(EVENTS.RESULT, (newResults) => {
+		console.log('Received results in panel:', newResults);
+		setResults(newResults);
 	});
 
 	return (
 		<AddonPanel active={props.active ?? false}>
-			<Fragment>
-				<p>Stuff will go here</p>
-			</Fragment>
+			<p>Stuff will go here</p>
 		</AddonPanel>
 	);
 });

@@ -1,13 +1,10 @@
-import { useEffect, useChannel } from 'storybook/preview-api';
 import type { Args, DecoratorFunction, PartialStoryFn, Renderer, StoryContext } from 'storybook/internal/types';
-
+import { HtmlParser } from '../utils/HtmlParser';
 import { EVENTS } from '../constants';
+import { addons } from 'storybook/preview-api';
 
-const parse = (canvas: ParentNode = globalThis.document) => {
-	// Get the entire DOM tree of the canvas element
-	const tree = canvas.querySelector('#storybook-root')?.innerHTML ?? '';
-
-	return canvas;
+const parse = (canvas: HTMLElement) => {
+	return new HtmlParser(canvas).getTree();
 };
 
 export const withAccessibilityTree: DecoratorFunction = (
@@ -19,11 +16,11 @@ export const withAccessibilityTree: DecoratorFunction = (
 		return storyFn();
 	}
 
-	const emit = useChannel({});
+	const channel = addons.getChannel();
 
-	useEffect(() => {
-		emit(EVENTS.RESULT, parse(context.canvasElement as ParentNode));
-	}, [context.canvasElement, emit]);
+	channel.on(EVENTS.REQUEST, () => {
+		channel.emit(EVENTS.RESULT, parse(context.canvasElement));
+	});
 
 	return storyFn();
 };
