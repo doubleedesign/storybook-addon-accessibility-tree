@@ -10,7 +10,6 @@
  */
 import type { ProjectAnnotations, Renderer } from 'storybook/internal/types';
 
-import { KEY } from './constants';
 import { withAccessibilityTree } from './decorators/withAccessibilityTree';
 
 /**
@@ -20,9 +19,6 @@ import { withAccessibilityTree } from './decorators/withAccessibilityTree';
 
 const preview: ProjectAnnotations<Renderer> = {
 	decorators: [withAccessibilityTree],
-	initialGlobals: {
-		[KEY]: false,
-	},
 };
 
 export default preview;

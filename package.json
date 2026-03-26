@@ -87,15 +87,11 @@
   },
   "bundler": {
     "managerEntries": [
-      "src/manager.tsx",
-      "src/manager-helpers.tsx"
+      "src/manager.tsx"
     ],
     "previewEntries": [
       "src/preview.ts",
       "src/index.ts"
-    ],
-    "nodeEntries": [
-      "src/preset.ts"
     ]
   },
   "storybook": {
