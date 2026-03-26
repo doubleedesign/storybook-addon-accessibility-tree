@@ -19,6 +19,7 @@ export const withAccessibilityTree: DecoratorFunction = (
 	const channel = addons.getChannel();
 
 	channel.on(EVENTS.REQUEST, () => {
+		console.log('request received');
 		channel.emit(EVENTS.RESULT, parse(context.canvasElement));
 	});
 

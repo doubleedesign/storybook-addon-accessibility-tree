@@ -1,16 +1,23 @@
+import {
+	computeAccessibleName,
+	computeAccessibleDescription,
+} from 'dom-accessibility-api';
+
 export class HtmlParser {
 	nodes: Node[] = [];
 
 	constructor(element: HTMLElement) {
 		this.nodes = Array.from(element.childNodes);
-		this.parse();
 	}
 
-	parse() {
-		//console.log(this.nodes);
+	parseNode(node: Node) {
+		console.log(node);
+
+		return node;
 	}
 
 	getTree() {
-		return {};
+		console.log('called getTree');
+		return this.nodes.map((node) => this.parseNode(node));
 	}
 }

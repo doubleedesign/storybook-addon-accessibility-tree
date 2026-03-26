@@ -31,6 +31,9 @@ export const Default: Story = {
 	beforeEach: async() => {
 		mockTreeData({ some: 'data' });
 	},
+	afterEach: () => {
+		mockTreeData(null)();
+	}
 };
 
 function mockTreeData(data) {
