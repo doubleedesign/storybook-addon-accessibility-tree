@@ -4,6 +4,7 @@ import { Panel } from '../components/Panel';
 import { HtmlParser } from '../utils/HtmlParser';
 import { convert, ThemeProvider, themes } from 'storybook/theming';
 import { fn } from 'storybook/test';
+import { ADDON_ID } from '../constants';
 
 const meta: Meta<typeof Panel> = {
 	title: 'Addon/Panel',
@@ -18,7 +19,12 @@ const meta: Meta<typeof Panel> = {
 				</ThemeProvider>
 			);
 		}
-	]
+	],
+	parameters: {
+		[ADDON_ID]: {
+			disable: true,
+		},
+	}
 };
 
 export default meta;

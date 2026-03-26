@@ -11,5 +11,6 @@ addons.register(ADDON_ID, (api) => {
 		title: 'Outline',
 		match: ({ viewMode }) => viewMode === 'story',
 		render: ({ active }) => <Panel active={active} />,
+		paramKey: ADDON_ID
 	});
 });
