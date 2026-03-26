@@ -14,6 +14,11 @@ export const withAccessibilityTree: DecoratorFunction = (
 	storyFn: PartialStoryFn<Renderer, Args>,
 	context: StoryContext<Renderer, Args>,
 ) => {
+	// skip addon logic on docs pages
+	if (context.viewMode === 'docs') {
+		return storyFn();
+	}
+
 	const emit = useChannel({});
 
 	useEffect(() => {
