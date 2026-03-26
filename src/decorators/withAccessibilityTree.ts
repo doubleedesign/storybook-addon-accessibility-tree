@@ -1,3 +1,4 @@
+import { useEffect } from 'storybook/preview-api';
 import type { Args, DecoratorFunction, PartialStoryFn, Renderer, StoryContext } from 'storybook/internal/types';
 import { HtmlParser } from '../utils/HtmlParser';
 import { EVENTS } from '../constants';
@@ -18,8 +19,12 @@ export const withAccessibilityTree: DecoratorFunction = (
 
 	const channel = addons.getChannel();
 
+	// Emit on initial render
+	useEffect(() => {
+		channel.emit(EVENTS.REQUEST);
+	}, []);
+
 	channel.on(EVENTS.REQUEST, () => {
-		console.log('request received');
 		channel.emit(EVENTS.RESULT, parse(context.canvasElement));
 	});
 

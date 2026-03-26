@@ -1,5 +1,5 @@
 import React, { memo, useState, useEffect } from 'react';
-import { addons } from 'storybook/preview-api';
+import { addons } from 'storybook/manager-api';
 import { AddonPanel } from 'storybook/internal/components';
 import { EVENTS } from '../constants';
 
@@ -13,7 +13,7 @@ export const Panel: React.FC<PanelProps> = memo(function OutlinePanel(props: Pan
 
 	useEffect(() => {
 		channel.emit(EVENTS.REQUEST);
-	}, [channel]);
+	}, []);
 
 	channel.on(EVENTS.RESULT, (newResults) => {
 		console.log('Received results in panel:', newResults);
