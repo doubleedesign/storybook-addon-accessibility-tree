@@ -15,10 +15,6 @@ if(isDebugMode) {
 	});
 }
 
-// Register @storybook/manager-api as a mocked module.
-// All its exports become Vitest mock functions, so we can inject results in the stories that test the addon.
-sb.mock(import('storybook/manager-api'), { spy: true });
-
 const preview: Preview = {
 	initialGlobals: {
 		background: { value: 'light' },
