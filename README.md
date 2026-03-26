@@ -50,6 +50,7 @@ After forking/cloning this repository, run `pnpm install` to install dependencie
 Running with `pnpm run dev` does the following:
 - sets the `STORYBOOK_DEBUG` environment variable
 - runs Storybook in dev mode (the same as in `start` mode, but now debugging is enabled)
+- Logs all Storybook preview events to the browser console (debug tab)
 - loads the addon's source code directly instead of the built version in `local-preset.ts`, which provides better source mapping for preview-related files and a faster feedback loop due to the lack of build step.
 
 > \[!NOTE]

@@ -7,6 +7,10 @@ const config = defineMain({
 		'@storybook/addon-a11y',
 		'@storybook/addon-docs'
 	],
+	env: (config) => ({
+		...config,
+		STORYBOOK_DEBUG: (process.env.STORYBOOK_DEBUG?.trim() === '1' || process.env.STORYBOOK_DEBUG?.trim()?.toLowerCase() === 'true').toString()
+	}),
 	framework: '@storybook/react-vite',
 	viteFinal: async (config) => {
 		config.build = {
