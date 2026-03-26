@@ -15,7 +15,6 @@ export function previewAnnotations(entry = []) {
 
 export function managerEntries(entry = []) {
 	if(isDebugMode) {
-		console.log('should load source manager');
 		return [...entry, fileURLToPath(import.meta.resolve('../src/manager.tsx'))];
 	}
 
