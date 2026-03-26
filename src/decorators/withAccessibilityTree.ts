@@ -25,6 +25,7 @@ export const withAccessibilityTree: DecoratorFunction = (
 	}, []);
 
 	channel.on(EVENTS.REQUEST, () => {
+		console.log(context.canvasElement);
 		channel.emit(EVENTS.RESULT, parse(context.canvasElement));
 	});
 

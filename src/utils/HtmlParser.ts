@@ -17,7 +17,6 @@ export class HtmlParser {
 	}
 
 	getTree() {
-		console.log('called getTree');
 		return this.nodes.map((node) => this.parseNode(node));
 	}
 }
