@@ -12,7 +12,7 @@ export class HtmlParser {
 		return {
 			role: getRole(node) || 'generic',
 			name: computeAccessibleName(node),
-			children: this.parseChildren(node),
+			children: this.parseChildren(node)
 		};
 	}
 
@@ -26,10 +26,23 @@ export class HtmlParser {
 		}).filter((child): child is ParsedNode => child !== undefined);
 	}
 
+	filterTree(nodes: ParsedNode[]): ParsedNode[] {
+		return nodes.reduce<ParsedNode[]>((acc, node) => {
+			if (['presentation', 'generic', 'none'].includes(node.role) && !node.name) {
+				return [...acc, ...this.filterTree(node.children ?? [])];
+			}
+
+			return [...acc, { ...node, children: this.filterTree(node.children ?? []) }];
+		}, []);
+	}
+
 	getTree(): ParsedNode[] {
 		// TODO: Filter out hidden elements, see https://developer.mozilla.org/en-US/docs/Web/API/Element/checkVisibility
-		// TODO: Filter out presentational roles, other generic containers etc that screen readers ignore
 
-		return this.nodes.map((node) => this.parseNode(node));
+		const rawTree = this.nodes.map((node) => this.parseNode(node));
+
+		// Recursively filter out nodes with generic roles and no accessible name, but keep their children
+		return this.filterTree(rawTree);
 	}
+
 }

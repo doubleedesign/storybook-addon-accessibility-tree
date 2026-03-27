@@ -25,12 +25,22 @@ const meta: Meta<typeof Panel> = {
 export default meta;
 type Story = StoryObj<typeof Panel>;
 
-export const Default: Story = {
+export const Basic: Story = {
 	args: {
 		active: true,
 	},
 	render: (args) => {
-		const mockResults = { results: [{ role: 'alert', name: 'Mock alert' }], };
+		const mockResults = {
+			results: [{
+				role: 'alert',
+				name: 'Mock alert',
+				children: [
+					{ role: 'heading', name: 'Mock alert heading' },
+					{ role: 'button', name: 'Mock button' }
+				]
+			}]
+		};
+
 		return (
 			<DiProvider use={[injectable(useResultCache, () => (mockResults))]}>
 				<Panel {...args} />
