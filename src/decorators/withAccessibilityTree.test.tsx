@@ -44,6 +44,6 @@ describe('withAccessibilityTree', () => {
 	it('should emit accessibility tree data on initial story render', () => {
 		withAccessibilityTree(MockStory, mockContext as StoryContext);
 
-		expect(mockEmit).toHaveBeenCalledWith(EVENTS.RESULT, 'some string');
+		expect(mockEmit).toHaveBeenCalledWith(EVENTS.A11Y_TREE_RESPONSE, 'some string');
 	});
 });

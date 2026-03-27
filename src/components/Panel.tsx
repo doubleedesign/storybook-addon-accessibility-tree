@@ -10,11 +10,11 @@ interface PanelProps {
 
 export const Panel: React.FC<PanelProps> = memo(function OutlinePanel(props: PanelProps) {
 	const channel = addons.getChannel();
-	const [results, setResults] = useState(null);
+	const [results, setResults] = useState({});
 
-	const requestResults = () => {
-		console.log('requesting results');
-		channel.emit(EVENTS.REQUEST);
+	const requestResults = (event) => {
+		console.log('requesting results on event:', event);
+		channel.emit(EVENTS.A11Y_TREE_REQUESTED);
 	};
 
 	const handleResults = (newResults) => {
@@ -24,12 +24,12 @@ export const Panel: React.FC<PanelProps> = memo(function OutlinePanel(props: Pan
 
 	useEffect(() => {
 		// Refresh on the relevant native events
-		channel.on(FORCE_REMOUNT, requestResults);
-		channel.on(STORY_FINISHED, requestResults);
-		channel.on(UPDATE_QUERY_PARAMS, requestResults);
+		[FORCE_REMOUNT, STORY_FINISHED, UPDATE_QUERY_PARAMS].forEach((event) => {
+			channel.on(event, () => requestResults(event));
+		});
 
 		// Listen for results from the preview decorator
-		channel.on(EVENTS.RESULT, handleResults);
+		channel.on(EVENTS.A11Y_TREE_RESPONSE, handleResults);
 
 		// Cleanup - ensures the results don't persist across story changes
 		return () => {
@@ -37,13 +37,13 @@ export const Panel: React.FC<PanelProps> = memo(function OutlinePanel(props: Pan
 			channel.off(STORY_FINISHED, requestResults);
 			channel.off(UPDATE_QUERY_PARAMS, requestResults);
 
-			channel.off(EVENTS.RESULT, handleResults);
+			channel.off(EVENTS.A11Y_TREE_RESPONSE, handleResults);
 		};
-	}, []);
+	}, [channel]);
 
 	return (
 		<AddonPanel active={props.active ?? false}>
-			<p>Stuff will go here</p>
+			<>{JSON.stringify(results)}</>
 		</AddonPanel>
 	);
 });

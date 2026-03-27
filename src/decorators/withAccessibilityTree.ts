@@ -19,14 +19,14 @@ export const withAccessibilityTree: DecoratorFunction = (
 
 	const channel = addons.getChannel();
 
-	// Emit on initial render
+	// Emit request on initial render
 	useEffect(() => {
-		channel.emit(EVENTS.REQUEST);
+		channel.emit(EVENTS.A11Y_TREE_REQUESTED);
 	}, []);
 
-	channel.on(EVENTS.REQUEST, () => {
-		console.log(context.canvasElement);
-		channel.emit(EVENTS.RESULT, parse(context.canvasElement));
+	// Pick up request events and respond with the parsed results
+	channel.on(EVENTS.A11Y_TREE_REQUESTED, () => {
+		channel.emit(EVENTS.A11Y_TREE_RESPONSE, parse(context.canvasElement));
 	});
 
 	return storyFn();
