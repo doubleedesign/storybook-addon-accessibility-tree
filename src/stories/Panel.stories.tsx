@@ -5,6 +5,7 @@ import { HtmlParser } from '../utils/HtmlParser';
 import { convert, ThemeProvider, themes } from 'storybook/theming';
 import { fn } from 'storybook/test';
 import { ADDON_ID } from '../constants';
+import type { ParsedNode } from '../types';
 
 const meta: Meta<typeof Panel> = {
 	title: 'Addon/Panel',
@@ -35,14 +36,19 @@ export const Default: Story = {
 		active: true,
 	},
 	beforeEach: async() => {
-		mockTreeData({ some: 'data' });
+		mockTreeData([
+			{
+				role: 'alert',
+				name: 'Alert text',
+			}
+		]);
 	},
 	afterEach: () => {
-		mockTreeData(null)();
+		mockTreeData([])();
 	}
 };
 
-function mockTreeData(data) {
+function mockTreeData(data: ParsedNode[]) {
 	const original = HtmlParser.prototype.getTree;
 
 	HtmlParser.prototype.getTree = fn(() => {

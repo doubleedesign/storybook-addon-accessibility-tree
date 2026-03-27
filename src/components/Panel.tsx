@@ -3,6 +3,7 @@ import { addons } from 'storybook/manager-api';
 import { AddonPanel } from 'storybook/internal/components';
 import { EVENTS } from '../constants';
 import { UPDATE_QUERY_PARAMS, FORCE_REMOUNT, STORY_FINISHED } from 'storybook/internal/core-events';
+import type { ParsedNode } from '../types';
 
 interface PanelProps {
 	active?: boolean;
@@ -12,12 +13,12 @@ export const Panel: React.FC<PanelProps> = memo(function OutlinePanel(props: Pan
 	const channel = addons.getChannel();
 	const [results, setResults] = useState({});
 
-	const requestResults = (event) => {
+	const requestResults = (event: unknown) => {
 		console.log('requesting results on event:', event);
 		channel.emit(EVENTS.A11Y_TREE_REQUESTED);
 	};
 
-	const handleResults = (newResults) => {
+	const handleResults = (newResults: ParsedNode[]) => {
 		console.log('Received results in panel:', newResults);
 		setResults(newResults);
 	};
