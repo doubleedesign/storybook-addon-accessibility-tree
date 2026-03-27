@@ -71,6 +71,7 @@
     "prompts": "^2.4.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-magnetic-di": "^3.2.4",
     "storybook": "next",
     "ts-dedent": "^2.2.0",
     "tsup": "^8.5.0",

@@ -6,9 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="ffece7b8-7a39-4803-b428-345850734800" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Panel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Panel.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/decorators/withAccessibilityTree.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/decorators/withAccessibilityTree.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/HtmlParser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/HtmlParser.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stories/Panel.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/stories/Panel.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +129,7 @@
       <workItem from="1774428071596" duration="623000" />
       <workItem from="1774428711559" duration="389000" />
       <workItem from="1774429114666" duration="319000" />
-      <workItem from="1774429447967" duration="10781000" />
+      <workItem from="1774429447967" duration="14206000" />
     </task>
     <servers />
   </component>

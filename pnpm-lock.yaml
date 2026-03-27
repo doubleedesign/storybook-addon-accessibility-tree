@@ -87,6 +87,9 @@ importers:
       react-dom:
         specifier: ^18.2.0
         version: 18.3.1(react@18.3.1)
+      react-magnetic-di:
+        specifier: ^3.2.4
+        version: 3.2.4(eslint@9.38.0)(prop-types@15.8.1)(react@18.3.1)
       storybook:
         specifier: next
         version: 10.4.0-alpha.3(@testing-library/dom@10.4.1)(prettier@3.6.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -2576,6 +2579,17 @@ packages:
 
   react-is@17.0.2:
     resolution: {integrity: sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==}
+
+  react-magnetic-di@3.2.4:
+    resolution: {integrity: sha512-ZQSAxi66rh88vACMLzH/3EP/QMqshiimsSnoUSS85huYN0ChVAULQHPuZevrgGU4VontpH9/CVGsgvMhFeMJyQ==}
+    engines: {node: '>=10.16.0'}
+    peerDependencies:
+      eslint: '*'
+      prop-types: ^15.0.0
+      react: ^16.9.0 || ^17.0.0 || ^18.0.0
+    peerDependenciesMeta:
+      eslint:
+        optional: true
 
   react-refresh@0.17.0:
     resolution: {integrity: sha512-z6F7K9bV85EfseRCp2bzrpyQ0Gkw1uLoCel9XBVWPg/TjRj94SkJzUTGfOa4bs7iJvBWtQG0Wq7wnI0syw3EBQ==}
@@ -6036,6 +6050,13 @@ snapshots:
   react-is@16.13.1: {}
 
   react-is@17.0.2: {}
+
+  react-magnetic-di@3.2.4(eslint@9.38.0)(prop-types@15.8.1)(react@18.3.1):
+    dependencies:
+      prop-types: 15.8.1
+      react: 18.3.1
+    optionalDependencies:
+      eslint: 9.38.0
 
   react-refresh@0.17.0: {}
 

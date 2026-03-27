@@ -1,11 +1,10 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Panel } from '../components/Panel';
-import { HtmlParser } from '../utils/HtmlParser';
 import { convert, ThemeProvider, themes } from 'storybook/theming';
-import { fn } from 'storybook/test';
 import { ADDON_ID } from '../constants';
-import type { ParsedNode } from '../types';
+import { DiProvider, injectable } from 'react-magnetic-di';
+import { useResultCache } from '../controllers/useResultCache';
 
 const meta: Meta<typeof Panel> = {
 	title: 'Addon/Panel',
@@ -20,12 +19,7 @@ const meta: Meta<typeof Panel> = {
 				</ThemeProvider>
 			);
 		}
-	],
-	parameters: {
-		[ADDON_ID]: {
-			disable: true,
-		},
-	}
+	]
 };
 
 export default meta;
@@ -35,27 +29,12 @@ export const Default: Story = {
 	args: {
 		active: true,
 	},
-	beforeEach: async() => {
-		mockTreeData([
-			{
-				role: 'alert',
-				name: 'Alert text',
-			}
-		]);
-	},
-	afterEach: () => {
-		mockTreeData([])();
+	render: (args) => {
+		const mockResults = { results: [{ role: 'alert', name: 'Mock alert' }], };
+		return (
+			<DiProvider use={[injectable(useResultCache, () => (mockResults))]}>
+				<Panel {...args} />
+			</DiProvider>
+		);
 	}
 };
-
-function mockTreeData(data: ParsedNode[]) {
-	const original = HtmlParser.prototype.getTree;
-
-	HtmlParser.prototype.getTree = fn(() => {
-		return data;
-	});
-
-	return () => {
-		HtmlParser.prototype.getTree = original;
-	};
-}
