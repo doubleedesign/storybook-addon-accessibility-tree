@@ -2,9 +2,10 @@
 
 See an outline of your component's semantic structure as understood by browsers, assistive technologies, and search engines.
 
+Utilises [dom-accessibility-api](https://www.npmjs.com/package/dom-accessibility-api) by Sebastian Silbermann for determining the relevant element properties.
+
 > [!NOTE]  
 > This addon has been developed for and tested with Storybook 10. It might work with earlier versions, it might not. ¯\\_(ツ)_/¯
-
 
 ## Setup
 
