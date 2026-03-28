@@ -36,3 +36,19 @@ jobs:
             --title "v$(node -p "require('./package.json').version")" \
             --generate-notes \
             --prerelease
+
+  publish-npm:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: build-output
+          path: dist/
+      - name: Publish to npm
+        run: |
+          echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
+          npm publish --access public --tag alpha
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

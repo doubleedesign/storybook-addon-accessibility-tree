@@ -16,7 +16,7 @@ Utilises [dom-accessibility-api](https://www.npmjs.com/package/dom-accessibility
 First, install the package in your project:
 
 ```sh
-npm install --save-dev storybook-addon-accessibility-tree
+npm install --save-dev @doubleedesign/storybook-addon-accessibility-tree
 ```
 
 Then, register it as an addon in `.storybook/main.js`:
@@ -31,7 +31,7 @@ const config: StorybookConfig = {
   // ...rest of config
   addons: [
     // ... other addons
-    'storybook-addon-accessibility-tree', 
+    '@doubleedesign/storybook-addon-accessibility-tree', 
   ],
 };
 
