@@ -49,6 +49,8 @@ export default [
 				},
 			],
 		},
+	},
+	{
 		ignores: [
 			'.github/dependabot.yml',
 			'!.*',
