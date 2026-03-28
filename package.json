@@ -1,6 +1,6 @@
 {
-  "name": "storybook-addon-accessibility-tree",
-  "version": "0.0.0",
+  "name": "@doubleedesign/storybook-addon-accessibility-tree",
+  "version": "1.0.0-alpha1",
   "description": "See an outline of your component's semantic structure as understood by browsers, assistive technologies, and search engines.",
   "keywords": [
     "storybook-addon"
@@ -40,6 +40,7 @@
     "lint": "eslint --cache .",
     "lint:fix": "pnpm lint --fix",
     "prerelease": "zx scripts/prepublish-checks.js",
+    "release:alpha": "npm run build && auto canary",
     "release": "npm run build && auto shipit",
     "start": "run-p build:watch \"storybook --quiet\"",
     "storybook": "storybook dev -p 6006",
