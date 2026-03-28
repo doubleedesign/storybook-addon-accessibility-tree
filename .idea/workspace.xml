@@ -6,10 +6,23 @@
   <component name="ChangeListManager">
     <list default="true" id="ffece7b8-7a39-4803-b428-345850734800" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Panel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Panel.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/stories/Panel.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/stories/Panel.stories.tsx" afterDir="false" />
+=======
+<<<<<<< Updated upstream
+      <change beforePath="$PROJECT_DIR$/src/components/Panel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Panel.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/decorators/withAccessibilityTree.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/decorators/withAccessibilityTree.ts" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/docs/WebStorm.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/WebStorm.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/decorators/withAccessibilityTree.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/decorators/withAccessibilityTree.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stories/Panel.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/stories/Panel.stories.tsx" afterDir="false" />
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
       <change beforePath="$PROJECT_DIR$/src/utils/HtmlParser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/HtmlParser.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,38 +60,52 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;Vitest.withAccessibilityTree.executor&quot;: &quot;Run&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;22.22.1&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;22.19.15&quot;,
-    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/leesa/WebstormProjects/storybook-addon-accessibility-tree&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;pnpm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\leesa\\WebstormProjects\\storybook-addon-accessibility-tree\\node_modules\\prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.better_highlights.regexp&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\leesa\\AppData\\Local\\Programs\\WebStorm\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Vitest.HtmlParser.executor": "Run",
+    "Vitest.withAccessibilityTree.executor": "Run",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "javascript.nodejs.core.library.configured.version": "22.22.2",
+    "javascript.nodejs.core.library.typings.version": "22.19.15",
+    "javascript.preferred.runtime.type.id": "node",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "C:/Users/leesa/WebstormProjects/storybook-addon-accessibility-tree",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "pnpm",
+    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\leesa\\WebstormProjects\\storybook-addon-accessibility-tree\\node_modules\\prettier",
+    "settings.editor.selected.configurable": "preferences.better_highlights.regexp",
+    "to.speed.mode.migration.done": "true",
+    "ts.external.directory.path": "C:\\Users\\leesa\\AppData\\Local\\Programs\\WebStorm\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager">
+}]]></component>
+  <component name="RunManager" selected="Vitest.HtmlParser">
+    <configuration name="HtmlParser" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <vitest-options value="--coverage --run" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/utils/HtmlParser.test.tsx" />
+      <test-names>
+        <test-name value="HtmlParser" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="JavaScriptTestRunnerVitest">
       <node-interpreter value="project" />
       <vitest-options value="--coverage" />
@@ -101,6 +128,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Vitest.HtmlParser" />
         <item itemvalue="Vitest.withAccessibilityTree" />
       </list>
     </recent_temporary>
@@ -130,7 +158,16 @@
       <workItem from="1774428071596" duration="623000" />
       <workItem from="1774428711559" duration="389000" />
       <workItem from="1774429114666" duration="319000" />
+<<<<<<< Updated upstream
       <workItem from="1774429447967" duration="19725000" />
+=======
+<<<<<<< Updated upstream
+      <workItem from="1774429447967" duration="10781000" />
+=======
+      <workItem from="1774429447967" duration="5380000" />
+      <workItem from="1774493610164" duration="10585000" />
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>

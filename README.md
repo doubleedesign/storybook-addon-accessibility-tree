@@ -36,14 +36,20 @@ export default config;
 
 ## Development
 
-After forking/cloning this repository, run `pnpm install` to install dependencies. Then you can run, build, and/or test with the following commands:
+After forking/cloning this repository, run `pnpm install` to install project dependencies.
 
-| Command          | Description                                                              |
-|------------------|--------------------------------------------------------------------------|
-| `pnpm run dev`   | Runs Storybook in an enhanced dev mode (see below for details)           |
-| `pnpm run start` | Runs babel in watch mode and starts Storybook using the built addon code |
-| `pnpm run build` | Builds and packages the addon code                                       |
-| `pnpm run test`  | Runs all unit tests                                                      |
+Ensure you have [Sass](https://sass-lang.com/install) installed globally and available on the command line to compile the component styles.
+
+Then you can run, build, and/or test with the following commands:
+
+| Command               | Description                                                                                                  |
+|-----------------------|--------------------------------------------------------------------------------------------------------------|
+| `pnpm run dev`        | Runs Storybook in an enhanced dev mode (see below for details)                                               |
+| `pnpm run start`      | Runs babel in watch mode and starts Storybook using the built addon code                                     |
+| `pnpm run build`      | Builds and packages the addon code                                                                           |
+| `pnpm run test`       | Runs all unit tests                                                                                          |
+| `sass src/components` | Compiles component CSS files (from SCSS). Alternatively, set up a File Watcher in WebStorm to automate this. |
+
 
 ### Dev mode
 
@@ -70,3 +76,7 @@ Running with `pnpm run dev` does the following:
 For more information about developing addons, see:
 - [Addon kit template repo](https://github.com/storybookjs/addon-kit)
 - [Addon development docs](https://storybook.js.org/docs/addons/writing-addons)
+- [Addon Knowledge Base](https://storybook.js.org/docs/addons/addon-knowledge-base)
+- [Storybook UI components](https://main--5a375b97f4b14f0020b0cda3.chromatic.com)
+- [Storybook Icons](https://main--64b56e737c0aeefed9d5e675.chromatic.com/)
+- [React Aria library](https://react-aria.adobe.com/) - where the tree component used in this addon's panel comes from

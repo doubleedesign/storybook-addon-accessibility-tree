@@ -14,7 +14,9 @@ const meta: Meta<typeof Panel> = {
 			// Wrap the story in the ThemeProvider in the same way as the manager so the expected variables are available to the AddonPanel inside
 			return (
 				<ThemeProvider theme={convert(themes.light)}>
-					<Story />
+					<div style={{ backgroundColor: themes.light.appBg, fontFamily: themes.light.fontBase, minHeight: '300px' }}>
+						<Story />
+					</div>
 				</ThemeProvider>
 			);
 		}

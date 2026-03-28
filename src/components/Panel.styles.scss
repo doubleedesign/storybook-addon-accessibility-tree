@@ -1,0 +1,76 @@
+.accessibility-tree {
+	font-size: 0.875rem;
+
+	&__controls,
+	&__content {
+		padding-inline: 0.75rem !important;
+		padding-block: 0.5rem;
+		box-sizing: border-box;
+	}
+
+	&__controls {
+		display: flex;
+		justify-content: flex-end;
+
+
+		> div {
+			display: contents;
+		}
+	}
+
+	&__content {
+		padding: 0.5rem 1rem;
+
+		&__item {
+			$item: &;
+
+			display: flex;
+			align-items: center;
+			text-decoration: underline;
+			text-decoration-color: transparent;
+			transition: text-decoration-color 0.2s ease;
+			padding: 0.125rem;
+			padding-inline-start: calc(var(--tree-item-level) * 0.75rem);
+
+			&[data-has-child-items="true"] {
+				cursor: pointer;
+
+				&:hover {
+					text-decoration-color: currentColor;
+				}
+
+				&:focus {
+					// default outline is fine
+				}
+
+			}
+
+			&__icon {
+				transition: transform 0.2s ease;
+				will-change: transform;
+				transform: translateZ(0);
+				margin-inline-end: 0.25rem;
+			}
+
+			&[aria-expanded="true"] {
+				#{$item}__icon {
+					transform: translateZ(0) rotate(90deg);
+				}
+			}
+
+			button {
+				appearance: none;
+				border: 0;
+				padding: 0;
+				outline: none;
+				box-shadow: none;
+				line-height: 1;
+				height: auto;
+
+				&:hover, &:focus, &:active {
+					background: transparent;
+				}
+			}
+		}
+	}
+}

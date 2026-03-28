@@ -1,8 +1,12 @@
-import React, { memo, useMemo, useEffect } from 'react';
-import { AddonPanel } from 'storybook/internal/components';
+import React, { memo, useState, useMemo, useEffect } from 'react';
+import { AddonPanel, Bar, Button } from 'storybook/internal/components';
+import { addons } from 'storybook/preview-api';
 import { useResultCache } from '../controllers/useResultCache';
 import { Collection, Tree, TreeItem, TreeItemContent } from 'react-aria-components';
+import { ArrowSolidRightIcon, CollapseIcon, ExpandAltIcon, StatusIcon, SyncIcon } from '@storybook/icons';
 import type { ParsedNode } from '../types';
+import { EVENTS } from '../constants';
+import './Panel.styles.css';
 
 interface PanelProps {
 	active?: boolean;
@@ -10,11 +14,45 @@ interface PanelProps {
 
 export const Panel: React.FC<PanelProps> = memo(function OutlinePanel(props: PanelProps) {
 	const { results } = useResultCache();
+	const channel = addons.getChannel();
+	const [depth, setDepth] = useState<number>(2);
+
+	const handleExpandAll = () => setDepth(Infinity);
+	const handleCollapseAll = () => setDepth(0);
+	const allExpanded = depth === Infinity;
+
+	const handleReload = () => {
+		channel.emit(EVENTS.A11Y_TREE_REQUESTED);
+		setDepth(2);
+	};
 
 	// TODO: Make the default expansion level configurable
 	return (
 		<AddonPanel active={props.active ?? false}>
-			<TreeEnhanced expandToLevel={2} nodes={results} />
+			<div className="accessibility-tree">
+				<Bar className="accessibility-tree__controls">
+					<Button
+						variant="ghost"
+						padding="small"
+						onClick={allExpanded ? handleCollapseAll : handleExpandAll}
+						ariaLabel={allExpanded ? 'Collapse all results' : 'Expand all results'}
+						aria-expanded={allExpanded}
+					>
+						{allExpanded ? <CollapseIcon /> : <ExpandAltIcon />}
+					</Button>
+					<Button
+						variant="ghost"
+						padding="small"
+						onClick={handleReload}
+						ariaLabel="Reload"
+					>
+						<SyncIcon />
+					</Button>
+				</Bar>
+				<div className="accessibility-tree__content">
+					<TreeEnhanced expandToLevel={depth} nodes={results} />
+				</div>
+			</div>
 		</AddonPanel>
 	);
 });
@@ -36,9 +74,21 @@ function TreeEnhanced({ expandToLevel, nodes }: { expandToLevel: number, nodes: 
 		<Tree key={renderKey} aria-label="Document Outline" items={nodes} defaultExpandedKeys={expandedKeys}>
 			{function renderItem(node: ParsedNode) {
 				return (
-					<TreeItem key={node.id} textValue={node.role}>
+					<TreeItem key={node.id} textValue={node.role} className="accessibility-tree__content__item">
 						<TreeItemContent>
-							{node.role} {node.name}
+							{({ hasChildItems }) => (
+								<>
+									{hasChildItems ? (
+										<Button>
+											<ArrowSolidRightIcon className="accessibility-tree__content__item__icon" />
+										</Button>
+									) : (
+										<StatusIcon className="accessibility-tree__content__item__icon" />
+									)}
+									<span className="accessibility-tree__content__item__role">{node.role}</span>:
+									<span className="accessibility-tree__content__item__name">&ldquo;{node.name}&rdquo;</span>
+								</>
+							)}
 						</TreeItemContent>
 						{node.children && (
 							<Collection items={node.children}>
