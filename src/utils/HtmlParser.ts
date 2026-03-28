@@ -10,6 +10,7 @@ export class HtmlParser {
 
 	parseNode(node: HTMLElement): ParsedNode {
 		return {
+			id: crypto.randomUUID(),
 			role: getRole(node) || 'generic',
 			name: computeAccessibleName(node),
 			children: this.parseChildren(node)

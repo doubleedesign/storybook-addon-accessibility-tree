@@ -2,7 +2,6 @@ import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Panel } from '../components/Panel';
 import { convert, ThemeProvider, themes } from 'storybook/theming';
-import { ADDON_ID } from '../constants';
 import { DiProvider, injectable } from 'react-magnetic-di';
 import { useResultCache } from '../controllers/useResultCache';
 
@@ -32,11 +31,15 @@ export const Basic: Story = {
 	render: (args) => {
 		const mockResults = {
 			results: [{
+				id: crypto.randomUUID(),
 				role: 'alert',
 				name: 'Mock alert',
 				children: [
-					{ role: 'heading', name: 'Mock alert heading' },
-					{ role: 'button', name: 'Mock button' }
+					{ id: crypto.randomUUID(), role: 'heading', name: 'Mock alert heading' },
+					{ id: crypto.randomUUID(), role: 'button', name: 'Mock button' },
+					{ id: crypto.randomUUID(), role: 'generic', children: [
+						{ id: crypto.randomUUID(), role: 'paragraph', children: [{ id: crypto.randomUUID(), role: 'text leaf', name: 'Example paragraph text' }] }
+					] }
 				]
 			}]
 		};
