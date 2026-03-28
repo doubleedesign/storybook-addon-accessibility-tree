@@ -40,8 +40,6 @@
     "lint": "eslint --cache .",
     "lint:fix": "pnpm lint --fix",
     "prerelease": "zx scripts/prepublish-checks.js",
-    "release:alpha": "npm run build && auto canary",
-    "release": "npm run build && auto shipit",
     "start": "run-p build:watch \"storybook --quiet\"",
     "storybook": "storybook dev -p 6006",
     "dev": "npx cross-env STORYBOOK_DEBUG=1 storybook dev -p 6006",
