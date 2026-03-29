@@ -1,7 +1,8 @@
 {
   "name": "@doubleedesign/storybook-addon-accessibility-tree",
-  "version": "1.0.0-alpha1",
+  "version": "1.0.0-alpha2",
   "description": "See an outline of your component's semantic structure as understood by browsers, assistive technologies, and search engines.",
+  "author": "Leesa Ward <contact@doubleedesign.com.au>",
   "keywords": [
     "storybook-addon",
     "accessibility",
@@ -15,7 +16,6 @@
     "url": "git+https://github.com/doubleedesign/storybook-addon-accessibility-tree"
   },
   "license": "MIT",
-  "author": "Leesa Ward <contact@doubleedesign.com.au>",
   "type": "module",
   "exports": {
     ".": {
@@ -101,7 +101,7 @@
     ]
   },
   "storybook": {
-    "displayName": "Accessibility Tree",
+    "displayName": "Accessibility Tree (Document Outline)",
     "supportedFrameworks": [
       "react",
       "vue",
@@ -110,10 +110,8 @@
       "ember",
       "html",
       "svelte",
-      "preact",
-      "react-native"
-    ],
-    "icon": "https://user-images.githubusercontent.com/321738/63501763-88dbf600-c4cc-11e9-96cd-94adadc2fd72.png"
+      "preact"
+    ]
   },
   "packageManager": "pnpm@10.22.0+sha512.bf049efe995b28f527fd2b41ae0474ce29186f7edcb3bf545087bd61fbbebb2bf75362d1307fda09c2d288e1e499787ac12d4fcb617a974718a6051f2eee741c",
   "dependencies": {

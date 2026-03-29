@@ -2,19 +2,20 @@
   font-size: 0.875rem;
 }
 .accessibility-tree__controls, .accessibility-tree__content {
-  padding-inline: 0.75rem !important;
   padding-block: 0.5rem;
   box-sizing: border-box;
 }
 .accessibility-tree__controls {
   display: flex;
   justify-content: flex-end;
+  padding-inline: 0.75rem;
 }
 .accessibility-tree__controls > div {
   display: contents;
 }
 .accessibility-tree__content {
-  padding: 0.5rem 1rem;
+  padding-block: 0.5rem;
+  padding-inline-end: 0.75rem;
 }
 .accessibility-tree__content__item {
   display: flex;
