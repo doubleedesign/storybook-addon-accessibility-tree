@@ -1,6 +1,6 @@
 {
   "name": "@doubleedesign/storybook-addon-accessibility-tree",
-  "version": "1.0.0-alpha3",
+  "version": "1.0.0-alpha4",
   "description": "See an outline of your component's semantic structure as understood by browsers, assistive technologies, and search engines.",
   "author": "Leesa Ward <contact@doubleedesign.com.au>",
   "keywords": [
