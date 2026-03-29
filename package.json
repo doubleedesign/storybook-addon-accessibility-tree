@@ -3,7 +3,12 @@
   "version": "1.0.0-alpha1",
   "description": "See an outline of your component's semantic structure as understood by browsers, assistive technologies, and search engines.",
   "keywords": [
-    "storybook-addon"
+    "storybook-addon",
+    "accessibility",
+    "semantics",
+	"a11y",
+    "html",
+    "document-outline"
   ],
   "repository": {
     "type": "git",
