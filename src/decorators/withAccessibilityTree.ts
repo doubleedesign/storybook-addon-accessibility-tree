@@ -1,4 +1,4 @@
-import { useEffect, useCallback } from 'storybook/preview-api';
+import { useEffect } from 'storybook/preview-api';
 import type { Args, DecoratorFunction, PartialStoryFn, Renderer, StoryContext } from 'storybook/internal/types';
 import { HtmlParser } from '../utils/HtmlParser';
 import { addons } from 'storybook/preview-api';
@@ -36,7 +36,7 @@ export const withAccessibilityTree: DecoratorFunction = (
 		return () => {
 			channel.off(EVENTS.A11Y_TREE_REQUESTED, emitResponse);
 		};
-	}, [channel]);
+	}, [channel, context.canvasElement]);
 
 	return storyFn();
 };

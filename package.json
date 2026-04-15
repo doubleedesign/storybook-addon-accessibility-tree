@@ -74,20 +74,22 @@
     "identity-obj-proxy": "^3.0.0",
     "npm-run-all2": "^8.0.4",
     "prompts": "^2.4.2",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-magnetic-di": "^3.2.4",
     "storybook": "next",
     "ts-dedent": "^2.2.0",
     "tsup": "^8.5.0",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.44.1",
-    "vite": "^7.0.5",
+    "vite": "^8.0.5",
     "vitest": "^4.1.1",
     "zx": "^8.7.1"
   },
   "peerDependencies": {
-    "storybook": "*"
+    "storybook": "*",
+	"react": "^18.3.1",
+	"react-dom": "^18.3.1"
   },
   "publishConfig": {
     "access": "public"
@@ -105,13 +107,7 @@
     "displayName": "Accessibility Tree (Document Outline)",
     "supportedFrameworks": [
       "react",
-      "vue",
-      "angular",
-      "web-components",
-      "ember",
-      "html",
-      "svelte",
-      "preact"
+      "vue"
     ]
   },
   "packageManager": "pnpm@10.22.0+sha512.bf049efe995b28f527fd2b41ae0474ce29186f7edcb3bf545087bd61fbbebb2bf75362d1307fda09c2d288e1e499787ac12d4fcb617a974718a6051f2eee741c",
