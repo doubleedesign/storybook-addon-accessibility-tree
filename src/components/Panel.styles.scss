@@ -10,7 +10,7 @@
 	&__controls {
 		display: flex;
 		justify-content: flex-end;
-		padding-inline: 0.75rem;
+		padding-inline: 0.75rem !important;
 
 		> div {
 			display: contents;
