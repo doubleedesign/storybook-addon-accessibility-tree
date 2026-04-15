@@ -1,6 +1,6 @@
-import React, { memo, useState, useMemo, useEffect } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { AddonPanel, Bar, Button } from 'storybook/internal/components';
-import { addons } from 'storybook/preview-api';
+import { addons } from 'storybook/manager-api';
 import { useResultCache } from '../controllers/useResultCache';
 import { Collection, Tree, TreeItem, TreeItemContent } from 'react-aria-components';
 import { ArrowSolidRightIcon, CollapseIcon, ExpandAltIcon, StatusIcon, SyncIcon } from '@storybook/icons';
@@ -8,11 +8,12 @@ import type { ParsedNode } from '../types';
 import { EVENTS } from '../constants';
 import './Panel.styles.css';
 
+
 interface PanelProps {
 	active?: boolean;
 }
 
-export const Panel: React.FC<PanelProps> = memo(function OutlinePanel(props: PanelProps) {
+export const Panel = (props: PanelProps) => {
 	const { results } = useResultCache();
 	const channel = addons.getChannel();
 	const [depth, setDepth] = useState<number>(2);
@@ -55,10 +56,10 @@ export const Panel: React.FC<PanelProps> = memo(function OutlinePanel(props: Pan
 			</div>
 		</AddonPanel>
 	);
-});
+};
 
 function TreeEnhanced({ expandToLevel, nodes }: { expandToLevel: number, nodes: ParsedNode[] }) {
-	const [renderKey, setRenderKey] = React.useState(0);
+	const [renderKey, setRenderKey] = useState(0);
 
 	const expandedKeys = useMemo(
 		() => getIdsToLevel(nodes, expandToLevel),
